@@ -405,7 +405,7 @@
                               <div class="icon_overlay"></div>
                               <div class="halim-post-title-box">
                                  <div class="halim-post-title ">
-                                    <p class="entry-title">BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO</p>
+                                    <p class="entry-title">BẠN CÙNG PHÒNG CỦA TÔI LÀ PHi</p>
                                     <p class="original_title">My Roommate Is a Gumiho</p>
                                  </div>
                               </div>
