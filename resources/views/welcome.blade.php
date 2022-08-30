@@ -171,10 +171,9 @@
          <div class="row fullwith-slider"></div>
       </div>
       <div class="container">
-<<<<<<< HEAD
-         @yield('content')
-=======
-         <div class="row container" id="wrapper">
+
+         @yield('content');
+         <!-- <div class="row container" id="wrapper">
             <div class="halim-panel-filter">
                <div id="ajax-filter" class="panel-collapse collapse" aria-expanded="true" role="menu">
                   <div class="ajax"></div>
@@ -914,8 +913,8 @@
                   <div class="clearfix"></div>
                </div>
             </aside>
-         </div>
->>>>>>> 0d85aef476e2abb73c193b2216d17efb023992b6
+         </div> -->
+
       </div>
       <div class="clearfix"></div>
       <footer id="footer" class="clearfix">
