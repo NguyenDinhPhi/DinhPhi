@@ -76,7 +76,13 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+        @if(Auth::id())
+        <div class="container">
+            @include('layouts.navbar')    
+        </div>
+        @endif
+        @yield('content')
+
         </main>
     </div>
     <script type="text/javascrip" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

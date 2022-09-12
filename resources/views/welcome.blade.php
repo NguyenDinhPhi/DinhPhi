@@ -115,7 +115,7 @@
                         <li class="mega dropdown">
                            <a title="Thể Loại" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Thể Loại <span class="caret"></span></a>
                            <ul role="menu" class=" dropdown-menu">
-                              <li><a title="Tâm Lý" href="danhmuc.php">Tâm Lý</a></li>
+                              <li><a title="Tâm Lý" href="{{route('genre')}}">Tâm Lý</a></li>
                               <li><a title="Hành động" href="">Hành động</a></li>
                               <li><a title="Viễn Tưởng" href="">Viễn Tưởng</a></li>
                               <li><a title="Hoạt Hình" href="danhmuc.php">Hoạt Hình</a></li>
