@@ -59,8 +59,8 @@ class MovieController extends Controller
         if($get_image){
             $get_name_image= $get_image->getClientOriginalName();
             $name_image = current(explode('.',$get_name_image));
-            $new_image = $name_image.rand(0,9999). '.' .$get_image->getClientOriginalExtension();
-            $get_image->movie($path,$new_image);
+            $new_image = $name_image.rand(0,9999).'.'.$get_image->getClientOriginalExtension();
+            $get_image->move($path,$new_image);
             $movie -> image = $new_image;
         }
         $movie->save();
