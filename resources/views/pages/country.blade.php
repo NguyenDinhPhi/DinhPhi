@@ -6,7 +6,7 @@
                <div class="panel-heading">
                   <div class="row">
                      <div class="col-xs-6">
-                        <div class="yoast_breadcrumb hidden-xs"><span><span><a href="">{{$count_slug->title}}</a> » <span class="breadcrumb_last" aria-current="page">2022</span></span></span></div>
+                        <div class="yoast_breadcrumb hidden-xs"><span><span><a href="">{{$country_slug->title}}</a> » <span class="breadcrumb_last" aria-current="page">2022</span></span></span></div>
                      </div>
                   </div>
                </div>
@@ -17,7 +17,7 @@
             <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
                <section>
                   <div class="section-bar clearfix">
-                     <h1 class="section-title"><span>{{$count_slug->title}}</span></h1>
+                     <h1 class="section-title"><span>{{$country_slug->title}}</span></h1>
                   </div>
                   <div class="halim_box">
                      <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">
