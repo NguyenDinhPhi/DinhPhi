@@ -16,7 +16,7 @@
                     @if(!isset($movie))
                         {!! Form::open(['route' => 'movie.store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     @else
-                        {!! Form::open(['route' =>['movie.update',$movie->id], 'method' => 'PUT']) !!}   
+                        {!! Form::open(['route' =>['movie.update',$movie->id], 'method' => 'PUT','enctype' => 'multipart/form-data']) !!}   
                     @endif
                         <div class="form-group">
                             {!! Form::label('title', 'Title', []) !!}
@@ -51,6 +51,9 @@
                         <div class="form-group">
                             {!! Form::label('Image', 'Image', []) !!}
                             {!! Form::file('image', ['class' => 'form-control-flie']) !!}
+                                @if($movie)
+                                <img width=15% src="{{asset('uploads/movie/'.$movie->image)}}">
+                                @endif
                         </div>
                     @if(!isset($movie))
                         {!! Form::submit('thêm dữ liệu', ['class' =>'btn btn-success']) !!}
@@ -69,6 +72,9 @@
                     <th scope="col">Description</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Active/Inactive</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Country</th>
                     <th scope="col">Manager</th>
                   </tr>
                 </thead>
@@ -77,9 +83,9 @@
                     <tr>
                         <th scope="row">{{$key}}</th>
                         <td>{{$cate->title}}</td>
-                        <td>{{$cate->image}}</td>
+                        <td><img width=60% src="{{asset('uploads/movie/'.$cate->image)}}"></td>
                         <td>{{$cate->description}}</td>
-                        <td>{{$cate->slug}}</td>
+                        <td>{{$cate->slu    }}</td>
                         <td>
                             @if($cate->status)
                                 Hiển thị
@@ -87,6 +93,9 @@
                                 Không hiện thị
                             @endif
                         </td>
+                        <td>{{$cate->category->title}}</td>
+                        <td>{{$cate->genre->title}}</td>
+                        <td>{{$cate->country->title}}</td>
                         <td>
                             {!! Form::open(['method' => 'DELETE','route' => ['movie.destroy',$cate ->id],'onsubmit'=>'return confirm("bạn có muốn xoá không ?")']) !!}
 	                        {!! Form::submit('Xoá', ['class'=>'btn btn-danger']) !!}
