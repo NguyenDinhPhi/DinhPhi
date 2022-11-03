@@ -51,9 +51,7 @@
                         <div class="form-group">
                             {!! Form::label('Image', 'Image', []) !!}
                             {!! Form::file('image', ['class' => 'form-control-flie']) !!}
-                                @if($movie)
-                                <img width=15% src="{{asset('uploads/movie/'.$movie->image)}}">
-                                @endif
+                                
                         </div>
                     @if(!isset($movie))
                         {!! Form::submit('thêm dữ liệu', ['class' =>'btn btn-success']) !!}
