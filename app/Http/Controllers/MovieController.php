@@ -114,7 +114,7 @@ class MovieController extends Controller
         $movie -> country_id = $data['country_id'];
         //them hinh anh
         
-        // $movie -> image = $data['image'];
+      
         $get_image = $request->file('image');
 
         if($get_image){
@@ -141,7 +141,7 @@ class MovieController extends Controller
      //xoa phim
     public function destroy($id)
     {
-        $movie = Movie ::find($id);
+        $movie = Movie::find($id);
         if(!empty($movie->image)){
             unlink('uploads/movie/'.$movie->image);
         }

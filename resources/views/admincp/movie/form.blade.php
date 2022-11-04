@@ -51,7 +51,9 @@
                         <div class="form-group">
                             {!! Form::label('Image', 'Image', []) !!}
                             {!! Form::file('image', ['class' => 'form-control-flie']) !!}
-                                
+                                @if($movie)
+                                <img width=20% src="{{asset('uploads/movie/'.$movie->image)}}">
+                                @endif
                         </div>
                     @if(!isset($movie))
                         {!! Form::submit('thêm dữ liệu', ['class' =>'btn btn-success']) !!}
@@ -83,7 +85,7 @@
                         <td>{{$cate->title}}</td>
                         <td><img width=60% src="{{asset('uploads/movie/'.$cate->image)}}"></td>
                         <td>{{$cate->description}}</td>
-                        <td>{{$cate->slu    }}</td>
+                        <td>{{$cate->slu}}</td>
                         <td>
                             @if($cate->status)
                                 Hiển thị
